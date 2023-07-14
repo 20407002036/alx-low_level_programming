@@ -265,6 +265,6 @@ extern int __overflow (FILE *, int);
 
 int main(void)
 {
-  printf("Hello, World!");
-   return (0);
+printf("Hello, World!");
+return (0);
 }
