@@ -15,7 +15,7 @@ char c = (char)n;
 for (c = 97 ; c <= 122 ; c++)
 {
 if (c == 101 || c == 113)
-{c++;
+{
 }
 else
 {
