@@ -25,3 +25,12 @@ putchar(c);
 putchar('\n');
 return (0);
 }
+/** just realised there is another way to do this.
+* just have the data type char  with a name.
+* make a for loop using he name of the char data type
+* remember characters are typed in a C Progran under ''
+*if(letter != 'q' && letter != 'e')
+*print the other letters 
+*
+*   :)
+*/
