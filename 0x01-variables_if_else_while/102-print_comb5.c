@@ -34,7 +34,7 @@ putchar(' ');
 putchar(b_tenspv + '0');
 putchar(b_onespv + '0');
 
-if (a != 99 || b != 99)
+if (a != 98 || b != 99)
 {putchar(',');
 putchar(' ');
 }
