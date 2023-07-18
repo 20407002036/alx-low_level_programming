@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -12,14 +11,4 @@ print_alphabet();
 return (0);
 
 }
-/**
- * The function prints alphabets to the standrd output
- *
- */
-void print_alphabet(void)
-{int x;
-for (x = 95; x < 122; x++)
-{putchar(x + '0');
-}
-putchar('\n');
-}
+ 
