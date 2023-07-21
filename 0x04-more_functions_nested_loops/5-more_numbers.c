@@ -9,17 +9,14 @@
 */
 void more_numbers(void)
 {
-int x;
-int y;
-for (x = 1; x <= 10; x++)
-{
-for (y = 0; y < 15; y++)
-{
-int tensOfy = y / 10;
-int onesOfy = y % 10;
-putchar(tensOfy + '0');
-putchar(onesOfy + '0');
+int j;
+int i;
+for (i = 0; i < 10; i++) {
+for (j = 0; j <= 14; j++) {
+if (j >= 10) {
+putchar((j / 10) + '0');
 }
-putchar('\n');
+putchar((j % 10) + '0');
+}putchar('\n');
 }
 }
