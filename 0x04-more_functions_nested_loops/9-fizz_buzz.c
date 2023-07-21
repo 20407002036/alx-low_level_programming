@@ -16,22 +16,18 @@ for (i = 1; i <= 100; i++)
 if (i % 3 == 0 && i % 5 == 0)
 {
 printf("FizzBizz ");
-i++;
 }
-if (i % 3 == 0)
+else if (i % 3 == 0)
 {
 printf("Fizz ");
-i++;
-}
-if (i == 100)
-{
 }
 else if (i % 5 == 0)
 {
 printf("Buzz ");
-i++;
 }
+else{
 printf("%d ", i);
+}
 }
 printf("\n");
 return (0);
