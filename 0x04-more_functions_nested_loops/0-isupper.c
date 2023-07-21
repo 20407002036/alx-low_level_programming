@@ -7,12 +7,7 @@
 *
 * Return: 1 if @c is upper case, 0 Otherwise
 */
-int _isupper(int c)
-{
-if (c >= 'A' && c < 'Z')
-{
-return (1);
+int _isupper(int c) {
+return (c >= 'A' && c <= 'Z') ? 1 : 0;
 }
-else
-return (0);  
-}
+
