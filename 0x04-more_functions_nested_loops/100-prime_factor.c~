@@ -1,0 +1,53 @@
+#include <stdio.h>
+/**
+* main - finds and prints the largest prime factor
+*
+* Description: prime factor
+*
+* Retuen: Always 0 (Success)
+*/
+
+/**
+* largestPrimeFactor - checks for the biggest prime factor
+*
+* @n: is the checks for prime 
+* Retrurn: maxPrime
+*/
+long long int largestPrimeFactor(long long int n)
+{
+long long int i, maxPrime;
+
+
+while (n % 2 == 0)
+{
+maxPrime = 2;
+n /= 2;
+}
+
+
+for (i = 3; i * i <= n; i += 2)
+{
+while (n % i == 0)
+{
+maxPrime = i;
+n /= i;
+}
+}
+
+if (n > 2)
+{
+maxPrime = n;
+}
+
+return (maxPrime);
+}
+
+int main(void)
+{
+long long int number = 612852475143;
+long long int result = largestPrimeFactor(number);
+
+printf("%lld\n", result);
+
+return (0);
+}
