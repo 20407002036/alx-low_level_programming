@@ -1,45 +1,55 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-int randomInt(int min, int max)
-{
-	return (min + rand() % (max - min + 1));
-}
-
-
-void generatePassword(char *password, int length)
-{
-char set[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	int charsetSize = sizeof(set) - 1;
-
-	for (int i = 0; i < length; i++)
-	{
-		password[i] = set[randomInt(0, charsetSize - 1)];
-	}
-
-	password[length] = '\0';
-}
-
+/**
+ * main - Generates random valid passwords for the
+ *        program 101-crackme.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	srand(time(NULL));
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
-	int minPasswordLength = 8;
-	int maxPasswordLength = 12;
+	srand(time(0));
 
-	int numPasswordsToGenerate = 5;
-
-	for (int i = 0; i < numPasswordsToGenerate; i++)
+	while (sum < 2772)
 	{
-		int passwordLength = randomInt(minPasswordLength, maxPasswordLength);
-
-		char password[maxPasswordLength + 1];
-		
-		generatePassword(password, passwordLength);
-
-		printf("Generated Password %d: %s\n", i + 1, password);
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
 	}
+
+	password[index] = '\0';
+
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+
+	printf("%s", password);
 
 	return (0);
 }
