@@ -3,7 +3,7 @@
 /**
  * _strcat - concatinates two stings
  *
- * @scr: string to be added to the dest
+ * @src: string to be added to the dest
  * @dest: stding to be added
  *
  * Return: char
