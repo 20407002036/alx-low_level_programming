@@ -3,14 +3,14 @@
 /**
  * string_toupper - changes lowercase letters to upper case
  *
- * @ :pointer to the string
+ * @str :pointer to the string
  *
  * Return: Char
  */
 char *string_toupper(char *str)
 {
-  char *ptr = str;
-  
+	char *ptr = str;
+
 	while (*ptr != '\0')
 	{
 		if (*ptr >= 'a' && *ptr <= 'z')
@@ -19,7 +19,7 @@ char *string_toupper(char *str)
 		}
 		ptr++;
 
-       }
+	}
 
 	return (str);
 }
