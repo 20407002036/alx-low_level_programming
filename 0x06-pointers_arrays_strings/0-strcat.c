@@ -1,29 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strcat - concatinates two stings
+ * _strcat - contacinates two strings
  *
- * @src: string to be added to the dest
- * @dest: stding to be added
+ * @dest: string to be incresed
+ * @src: string to be cut
  *
  * Return: char
  */
 char *_strcat(char *dest, char *src)
 {
-	char *dest_ptr = dest;
+	int i;
+	int j;
 
-	while (*dest != '\0')
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest++;
+		i++;
 	}
-	while (*src != '\0')
+	j = 0;
+	while (src[j] != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 
-	*dest = '\0';
-
-	return (dest_ptr);
+	dest[i] = '\0';
+	return (dest);
 }
