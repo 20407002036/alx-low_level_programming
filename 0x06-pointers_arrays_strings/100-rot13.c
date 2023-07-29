@@ -1,0 +1,25 @@
+#include "main.h"
+/**
+ * rot13 - encode a string using ROT13
+ *
+ * @str: string to be encoded
+ *
+ * Return: char
+ */
+char *rot13(char *str)
+{
+	char *ptr = str;
+	char *rot13_alphabet = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	while (*str)
+	{
+		if (*str >= 'A' && *str <= 'Z')
+			*str = rot13_alphabet[*str - 'A'];
+		else if (*str >= 'a' && *str <= 'z')
+			*str = rot13_alphabet[*str - 'a' + 26];
+
+		str++;
+	}
+
+	return (ptr);
+}
