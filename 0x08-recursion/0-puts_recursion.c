@@ -9,11 +9,19 @@
  */
 void _puts_recursion(char *s)
 {
-	if (*s != '\0')
+
+	if (*s == '\0')
 	{
-		putchar('s');
-		s++;
+		putchar('\0');
+
+		return;
 	}
 	else
-		putchar('\0');
+	{
+		putchar(*s);
+
+		_puts_recursion(s + 1);
+	}
+
+	putchar('\0');
 }
