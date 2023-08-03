@@ -1,53 +1,33 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * find_sqrt - returns natural sqrt of a number
+ * my_sqrt_recursion - This is my my_sqrt_recursion
+ *                     function about the square root
+ * @a: The entry is equal to n, of the before function
+ * @b: This is the sum
  *
- * @n: number to find sqrt
- * @start: range start
- * @end: range end
- *
- * Return: int
+ * Return: This is the result
  */
-int find_sqrt(int n, int start, int end)
+int my_sqrt_recursion(int a, int b)
 {
-
-	int mid = start + (end - start) / 2;
-	int square = mid * mid;
-
-	if (start > end)
-	{
+	if (a == (b * b))
+		return (b);
+	else if ((b * b) >= a)
 		return (-1);
-	}
-
-
-	if (square == n)
-	{
-		return (mid);
-	}
-	else if (square < n)
-	{
-		return (find_sqrt(n, mid + 1, end));
-	}
 	else
-	{
-		return (find_sqrt(n, start, mid - 1));
-	}
+		return (my_sqrt_recursion(a, b + 1));
 }
+
 /**
- * _sqrt_recursion - prints the sqrt of a number
+ * _sqrt_recursion - This is my first function
+ * @n: This is my value
  *
- * @n: number to get sqrt
- *
- * Return: int
+ * Return: This is my result of the function my_sqrt_recursion
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
+	if (n <= 0)
 		return (-1);
-	}
-
-	return (find_sqrt(n, 0, n));
+	return (my_sqrt_recursion(n, 0));
 }
-
