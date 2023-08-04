@@ -12,7 +12,7 @@ int is_prime_number(int prime)
 {
 	if (prime <= 1)
 		return (0);
-	if (prime == 2)
+	if (prime == 2 || prime == 3 || prime == 5 || prime == 7)
 		return (1);
 	if ((prime % 2 == 0) || (prime % 3 == 0) || (prime % 5 == 0))
 		return (0);
