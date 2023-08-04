@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdbool.h>
-#include <stdio.h>
+#include <string.h>
 /**
  * is_palindrome_helper - helps check the palindrome
  *
@@ -31,13 +31,7 @@ bool is_palindrome_helper(char *start, char *end)
  */
 int is_palindrome(char *s)
 {
-	int length = 0;
-
-	while (*s != '\0')
-	{
-		s++;
-		length++;
-	}
+  int length = strlen(s);
 
 	
 	if (length <= 1)
