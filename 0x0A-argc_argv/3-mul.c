@@ -10,21 +10,21 @@
  */
 int main(int argc, char *argv[])
 {
-  int a = atoi(argv[1]);
-  int b = atoi(argv[2]);
-  int result = a * b;
+	int a = atoi(argv[1]);
+	int b = atoi(argv[2]);
+	int result = a * b;
 
-  
-  if (argc == 3)
-    {
-      printf("%d\n", result);
-    }
-  else
-    {
-      printf("Error\n");
 
-      return (1);
-    }
+	if (argc == 3)
+	{
+		printf("%d\n", result);
+	}
+	else
+	{
+		printf("Error\n");
 
-  return (0);
+		return (1);
+	}
+
+	return (0);
 }
