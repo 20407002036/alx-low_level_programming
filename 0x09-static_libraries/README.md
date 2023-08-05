@@ -1,1 +1,1 @@
-This project focuses on the creation of static libraries and how they are implemented in C
+the create_static_lib.sh file craetes a static lib
