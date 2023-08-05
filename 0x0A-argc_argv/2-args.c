@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 /**
  * main - function that prints all arguements given to program

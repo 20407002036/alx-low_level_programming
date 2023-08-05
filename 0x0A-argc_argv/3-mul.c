@@ -1,4 +1,5 @@
 #include <stdio.h>
+#inlcude "main.h"
 #include <stdlib.h>
 /**
  * main - function the prints result of multiplication of numbers from argv[]
