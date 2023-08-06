@@ -1,46 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 /**
- * main - function that adds the int given as aguements
+ * main - program that adds positive numbers.
+ * @argc: number of arguments
+ * @argv: array with the arguments
  *
- * @argc: number of arguements given
- * @argv: pointer to the arguements
- *
- * Return: Always 0 (Success)
- */
+ * Return: always 0
+ **/
+
 int main(int argc, char *argv[])
 {
-	int i;
-	int j;
-       	int sum;
+	int i, suma = 0, res = 0;
+	char c[] = "Error", *find_letter;
 
-
-	if (argc < 2)
+	if (argc > 1)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	sum = 0;
-	for (i = 1; i < argc; i++)
-	{
-		char *arg = argv[i];
-		j = 0;
-
-		while (arg[j] != '\0')
+		for (i = 1; i < argc; i++)
 		{
-			if (!isdigit(arg[j]))
+			find_letter = argv[i];
+			while (*find_letter != 0)
 			{
-				printf("Error\n");
-				return (1);
+				if (*find_letter < 47 || *find_letter > 57)
+				{
+					printf("%s\n", c);
+					return (1);
+				}
+				find_letter++;
 			}
-			j++;
+			res = atoi(argv[i]);
+			suma += res;
 		}
-
-		sum += atoi(arg);
+		printf("%d\n", suma);
 	}
-
-	printf("%d\n", sum);
+	else
+		printf("%d\n", 0);
 	return (0);
 }
