@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * create_array _ function creates an array of char
+ * create_array - function creates an array of char
  *
  * @size: size of array to be created
  * @c: char to initialize the array
@@ -25,7 +25,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	while(i <= size)
+	while (i <= size)
 	{
 		ptr[i] = c;
 
