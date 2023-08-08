@@ -13,8 +13,8 @@
 char *_strdup(char *str)
 {
 
-  size_t size;
-  char *ptr;
+	size_t size;
+	char *ptr;
 
 	if (str == NULL)
 	{
