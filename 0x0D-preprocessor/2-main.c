@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-  char *name = __BASE_xFILE__;
+  char *name = __BASE_FILE__;
   
   printf("%s\n",name);
 
