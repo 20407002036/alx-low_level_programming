@@ -22,6 +22,6 @@ h = h->next;
 count++;
 
 }
-return (0);
+return (count);
 }
 
