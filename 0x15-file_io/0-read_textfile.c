@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#inlcude "mainn.h"
+#inlcude "main.h"
 #include <fcntl.h>
 
 /**
