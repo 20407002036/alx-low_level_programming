@@ -14,15 +14,15 @@ unsigned long int mask;
 
 if (index >= sizeof(unsigned long int) * 8)
 {
-return(-1);
+return (-1);
 }
 mask = 1UL << index;
 
 if ((n & mask) != 0)
-{
 return (1);
-}
-else {
+ 
+ else
+   {
 return (0);
 }
 }
