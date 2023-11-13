@@ -45,3 +45,7 @@ All your files should end with a new line (why?)
 The first line of all your files should be exactly #!/bin/bash
 A README.md file, at the root of the folder of the project, describing what each script is doing
 All your files must be executable
+
+
+# create 1-create_dynamic_lib.sh
+The file create a dynamic lib from all the .c iles in the current folder
