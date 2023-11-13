@@ -47,5 +47,5 @@ A README.md file, at the root of the folder of the project, describing what each
 All your files must be executable
 
 
-# create 1-create_dynamic_lib.sh
+## create 1-create_dynamic_lib.sh
 The file create a dynamic lib from all the .c iles in the current folder
