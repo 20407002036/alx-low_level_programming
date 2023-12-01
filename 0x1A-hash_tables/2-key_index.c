@@ -1,8 +1,3 @@
-/*
- * File: 2-key_index.c
- * Auth: Brennan D Baraban
-*/
-
 #include "hash_tables.h"
 
 /**

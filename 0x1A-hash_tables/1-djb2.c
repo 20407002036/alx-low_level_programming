@@ -1,8 +1,3 @@
-/*
- * File: 1-djb2.c
- * Auth: Brennan D Baraban
- */
-
 #include "hash_tables.h"
 
 /**

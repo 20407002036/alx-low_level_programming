@@ -6,6 +6,10 @@
 #include <string.h>
 
 /**
+ * By Solomon Kaniaru
+ */
+
+/**
  * struct hash_node_s - Node of a hash table
  * @key: The key, string
  * The key is unique in the HashTable
@@ -82,4 +86,4 @@ void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 
-#endif /* HASH_TABLES_H */
+#endif
