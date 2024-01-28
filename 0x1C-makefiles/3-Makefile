@@ -1,0 +1,41 @@
+# Makefile
+# By Solomon Kaniaru
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Program to delete files
+RM = rm -f
+
+# The 'all' rule builds the executable named 'school'
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Compile each source file to its corresponding object file
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Clean rule to delete Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# Oclean rule to delete the object files
+oclean:
+	$(RM) $(OBJ)
+
+# Fclean rule to delete Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Re rule to force recompilation of all source files
+re: fclean all
+
+.PHONY: all clean oclean fclean re
